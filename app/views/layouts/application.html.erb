@@ -1,15 +1,50 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>StaticPages</title>
+    <title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <div class="container">
+    <div class="jumbotron text-center">
+  <h1>My First Static Page site</h1>
+  
+</div>
+    <nav class="navbar navbar-default">
+    <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="home">DevsInc</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <%if (yield(:title))==="Home"%>
+          <li class="active"><a href="home">Home</a></li>
+          <li><a href="help">Help</a></li>
+          <li><a href="about">About Us</a></li>
+      <%end%>   
+       <%if (yield(:title))==="About"%>
+          <li><a href="home">Home</a></li>
+          <li><a href="help">Help</a></li>
+          <li class="active"><a href="about">About Us</a></li>
+      <%end%>   
+       <%if (yield(:title))==="Help"%>
+          <li><a href="home">Home</a></li>
+          <li class="active"><a href="help">Help</a></li>
+          <li><a href="about">About Us</a></li>
+      <%end%>     
+      
+    </ul>
+  </div>
+</nav>
+</div>
     <%= yield %>
   </body>
 </html>
