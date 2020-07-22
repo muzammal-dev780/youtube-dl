@@ -1,2 +1,107 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Basic Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+<div class="container">
+<div class="jumbotron text-center">
+  <h1>My First Static Page site</h1>
+  
+</div>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="home">DevsInc</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="home">Home</a></li>
+      <li><a href="help">Help</a></li>
+      <li><a href="about">About Us</a></li>
+    </ul>
+  </div>
+</nav>
+  <div class="row">
+    <div class="col-sm-4">
+       <div class="thumbnail">
+        <img src="<%= asset_path('mydp.jpg') %>" alt="Lights" style="width:100%">
+        <div class="caption">
+          <p>Lorem ipsum...</p>
+        </div>
+    </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="<%= asset_path('mydp.jpg') %>" alt="Lights" style="width:100%">
+        <div class="caption">
+          <p>Lorem ipsum...</p>
+        </div>
+    </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="<%= asset_path('mydp.jpg') %>" alt="Lights" style="width:100%">
+        <div class="caption">
+          <p>Lorem ipsum...</p>
+        </div>
+    </div>
+    </div>
+  </div>
+  <h2 class="text-center"> Table</h2>
+  <div class="table-responsive">
+  <table class="table table-striped">
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+    <td>john@example.com</td>
+  <tr>
+  <tr>
+    <td>Mary</td>
+    <td>Moe</td>
+    <td>mary@example.com</td>
+  </tr>
+  <tr>
+    <td>July</td>
+    <td>Dooley</td>
+    <td>july@example.com</td>
+  </tr>
+<table>
+</div>
+<h2 class="text-center"> Badges and list groups</h2>
+<ul class="list-group">
+  <li class="list-group-item">New <span class="badge">12</span></li>
+  <li class="list-group-item">Deleted <span class="badge">5</span></li>
+  <li class="list-group-item">Warnings <span class="badge">3</span></li>
+</ul>
+
+<h2 class="text-center"> Forms</h2>
+<form >
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control" id="email">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd">
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox"> Remember me</label>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+</div>
+</body>
+
+
+ 
+  
+
+
+</html>
