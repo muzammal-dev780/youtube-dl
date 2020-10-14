@@ -2,7 +2,7 @@ class Test
 	 def self.download_video(url)
 	 	options = {
 	 		format: 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best',
-	 		output: 'abc'
+	 		output: 'test'
 	 	}
 		 YoutubeDL.download(url, options)
 	end
