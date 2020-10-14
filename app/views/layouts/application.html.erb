@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
+    <title><%= full_title(yield(:title)) %> | Ruby on Rails Tutorial Sample App</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta charset="utf-8">
@@ -29,18 +29,18 @@
           <li class="active"><a href="/static_pages/home">Home</a></li>
           <li><a href="/static_pages/help">Help</a></li>
           <li><a href="/static_pages/about">About Us</a></li>
-      <%end%>   
+      <%end%>
        <%if (yield(:title))==="About"%>
           <li><a href="/static_pages/home">Home</a></li>
           <li><a href="/static_pages/help">Help</a></li>
           <li class="active"><a href="/static_pages/about">About Us</a></li>
-      <%end%>   
+      <%end%>
        <%if (yield(:title))==="Help"%>
           <li><a href="/static_pages/home">Home</a></li>
           <li class="active"><a href="/static_pages/help">Help</a></li>
           <li><a href="/static_pages/about">About Us</a></li>
-      <%end%>     
-      
+      <%end%>
+          <li><a href="/static_pages/download_video">Download video</a></li>
     </ul>
   </div>
 </nav>
