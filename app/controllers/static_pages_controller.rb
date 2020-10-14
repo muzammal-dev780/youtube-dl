@@ -1,4 +1,3 @@
-# require 'youtube-dl'
 class StaticPagesController < ApplicationController
   def home 
   end
@@ -9,7 +8,7 @@ class StaticPagesController < ApplicationController
   def download_video
   end
   def download
-  	url = "https://www.youtube.com/watch?v=rUWxSEwctFU"
+  	url = "https://www.youtube.com/watch?v=gRhmbfwCdqo"
   	Test.download_video(url)
 		redirect_to static_pages_home_path
   end

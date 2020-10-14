@@ -1,5 +1,5 @@
 # !/bin/yotube-dl
-require 'youtube-dl'
+# require 'youtube-dl'
 class Test 
 	 def self.download_video(url)
 	 	options = {
