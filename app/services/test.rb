@@ -6,7 +6,7 @@ class Test
 			 
 	 	# }
 		#  YoutubeDL.download(url, options)
-		system("youtube-dl -f 248 #{url}")
+		system("youtube-dl -4 -f 248 #{url}")
 	end
 # 	def self.download_with_lib_video(url)
 # 		options = {
