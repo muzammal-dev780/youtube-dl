@@ -9,11 +9,8 @@ class StaticPagesController < ApplicationController
   end
 
   def download
-  	url = "https://www.youtube.com/watch?v=gRhmbfwCdqo"
-    a = Test.download_video(url)
-    puts '----------------------------' * 10
-    puts a.inspect
-    puts '----------------------------' * 10
+    url = params[:q]
+    Test.download_video(url)
 		redirect_to static_pages_home_path
   end
   def about
